@@ -1,0 +1,18 @@
+<div style="margin-top: 70px;">
+  <div class="continer">
+    <div class="row">
+      <h1 class="text-center">{{ greeting }}</h1>
+    </div>
+    <div class="row">
+      <p class="text-center"> {{introduction}}</p>
+    </div>
+    <div class="row">
+      <h1 class="text-center">{{text}}</h1>
+      <input class="text-center" type="text" [(ngModel)]="text">
+      <ul>
+        <!-- we are iterating through list known as list. item is x think......for x in myList -->
+        <li *ngFor="let item of list">{{item}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
