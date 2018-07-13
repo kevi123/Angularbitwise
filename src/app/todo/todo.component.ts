@@ -9,6 +9,7 @@ import{Todo} from '../todo'
 })
 export class TodoComponent implements OnInit {
 
+  newTask: Todo = new Todo();
   todos = TODOS;
   constructor() { }
   addTodo() {
@@ -20,7 +21,9 @@ export class TodoComponent implements OnInit {
     this.todos.push(this.newTask);
     this.newTask = new Todo();
   }
-
+toggleTodo(item){
+  item.status = !item.status;
+}
   ngOnInit() {
   }
 
